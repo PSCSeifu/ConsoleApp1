@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{7F84280B-3D7C-4E2F-B78C-49CB50D6E7BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Report.Fields", "..\PdfMakerTest.cs\Report.Fields\Report.Fields.csproj", "{7F5E8A2F-DD89-4D0E-A446-BFFE5B282E07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Report.Fields", "Report.Fields\Report.Fields.csproj", "{8A8571BE-9BC6-4DD5-87A9-21942DFF0C29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{7F84280B-3D7C-4E2F-B78C-49CB50D6E7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F84280B-3D7C-4E2F-B78C-49CB50D6E7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F84280B-3D7C-4E2F-B78C-49CB50D6E7BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F5E8A2F-DD89-4D0E-A446-BFFE5B282E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F5E8A2F-DD89-4D0E-A446-BFFE5B282E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F5E8A2F-DD89-4D0E-A446-BFFE5B282E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F5E8A2F-DD89-4D0E-A446-BFFE5B282E07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A8571BE-9BC6-4DD5-87A9-21942DFF0C29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8571BE-9BC6-4DD5-87A9-21942DFF0C29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8571BE-9BC6-4DD5-87A9-21942DFF0C29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8571BE-9BC6-4DD5-87A9-21942DFF0C29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

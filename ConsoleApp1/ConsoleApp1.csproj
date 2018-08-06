@@ -49,8 +49,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PdfMakerTest.cs\Report.Fields\Report.Fields.csproj">
-      <Project>{7F5E8A2F-DD89-4D0E-A446-BFFE5B282E07}</Project>
+    <ProjectReference Include="..\Report.Fields\Report.Fields.csproj">
+      <Project>{8a8571be-9bc6-4dd5-87a9-21942dff0c29}</Project>
       <Name>Report.Fields</Name>
     </ProjectReference>
   </ItemGroup>

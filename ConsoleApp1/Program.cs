@@ -1,4 +1,6 @@
-﻿using Report.Fields;
+﻿
+
+using Report.Fields;
 
 namespace ConsoleApp1
 {
@@ -6,7 +8,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            EmployeeFields.EmployeeLinkedFields();
+           EmployeeFields.EmployeeLinkedFields();
         }
     }
 }
