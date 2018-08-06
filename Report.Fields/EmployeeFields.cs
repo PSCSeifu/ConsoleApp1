@@ -30,26 +30,8 @@ namespace Report.Fields
 
             return list;
         }
-               
+
         #region Plain
-
-        private static Tuple<string, string, string, FieldOptions, FieldPermissions> RetirementDate()
-        {
-            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
-            string desc = "Employee's Retirement Date";
-            string fparams = $"employee:retirementdate:RetirementDate:State Pension Date:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
-
-            var foptions = new FieldOptions()
-            {
-                CustomFormatString = "",
-                DisplayMode = DataDisplayModeEnum.dd_MMM_yyyy,
-                DecimalPlaces = 0,
-                MaxColumnLength = 12,
-                DisplayNamePlaceHolder = ""
-            };
-
-            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
-        }
 
         private static Tuple<string, string, string, FieldOptions, FieldPermissions> LastModifiedDate()
         {
@@ -180,7 +162,7 @@ namespace Report.Fields
         private static Tuple<string, string, string, FieldOptions, FieldPermissions> ApprenticeshipStartDate()
         {
             /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
-            string desc = "Employee's Apprentice End Date";
+            string desc = "Employee's Apprentice Start Date";
             string fparams = $"employee:apprenticeshipstartdate:ApprenticeshipStartDate:Apprentice Start Date:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
 
             var foptions = new FieldOptions()
@@ -216,8 +198,8 @@ namespace Report.Fields
         private static Tuple<string, string, string, FieldOptions, FieldPermissions> CompanyJoinDate()
         {
             /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
-            string desc = "Employee's Apprentice End Date";
-            string fparams = $"employee:CompanyJoinDate:CompanyJoinDate:CompanyJoinDate:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
+            string desc = "";
+            string fparams = $"employee:companyjoindate:CompanyJoinDate:CompanyJoinDate:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
 
             var foptions = new FieldOptions()
             {
@@ -231,9 +213,716 @@ namespace Report.Fields
             return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
         }
 
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> ContactTelephone()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:contacttelephone:ContactTelephone:Home Telephone:{desc}:Employee:Employee:String:Plain:Init";
 
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> CostCode1Percentage()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:costcode1percentage:CostCode1Percentage:CostCode1%:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Percentage,
+                DecimalPlaces = 3,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> CostCode2Percentage()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:costcode2percentage:CostCode2Percentage:CostCode2%:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Percentage,
+                DecimalPlaces = 3,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> CostCode3Percentage()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:costcode3percentage:CostCode3Percentage:CostCode3%:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Percentage,
+                DecimalPlaces = 3,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> CostCode4Percentage()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:costcode4percentage:CostCode4Percentage:CostCode4%:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Percentage,
+                DecimalPlaces = 3,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> CostCode5Percentage()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:costcode5percentage:CostCode5Percentage:CostCode5%:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Percentage,
+                DecimalPlaces = 3,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> DateOfBirth()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:dateofbirth:DateOfBirth:Date Of Birth:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.dd_MMM_yyyy,
+                DecimalPlaces = 0,
+                MaxColumnLength = 12,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> DirectorEndDate()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:directorenddate:DirectorEndDate:Director End Date:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.dd_MMM_yyyy,
+                DecimalPlaces = 0,
+                MaxColumnLength = 12,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+        
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> DirectorStartDate()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:directorstartdate:DirectorStartDate:Director Start Date:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.dd_MMM_yyyy,
+                DecimalPlaces = 0,
+                MaxColumnLength = 12,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> Email()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:email:Email:eSlip Email:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> EmployeeNo()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:employeeno:EmployeeNo:Emp No:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> Forename1()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:forename1:Forename1:Forename:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> Forename2()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:forename2:Forename2:Forename2:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> Initials()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:initials:Initials:Initials:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 15,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> InternalPhone()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:internalphone:InternalPhone:Internal PhoneNo:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> IsApprentice()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:IsApprentice:IsApprentice:Is Apprentice?:{desc}:Employee:Employee:NullableBool:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.ToYesNo,
+                DecimalPlaces = 0,
+                MaxColumnLength = 3,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> IsShiftWorker()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:isshiftworker:IsShiftWorker:Is Shift Worker?:{desc}:Employee:Employee:NullableBool:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.ToYesNo,
+                DecimalPlaces = 0,
+                MaxColumnLength = 3,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> JoinDate()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:joindate:CompanyJoinDate:Payroll Join Date:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.dd_MMM_yyyy,
+                DecimalPlaces = 0,
+                MaxColumnLength = 12,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> KnownAs()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:knownas:KnownAs:Known As:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> LeaveBroughtForward()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:leavebroughtforward:LeaveBroughtForward:Leave B/F:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.VariablesDecimalPlaces,
+                DecimalPlaces = 2,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> LeaveDue()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:leavedue:LeaveDue:Leave Balance:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.VariablesDecimalPlaces,
+                DecimalPlaces = 2,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> LeaveTaken()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:leavetaken:LeaveTaken:Leave Taken:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.VariablesDecimalPlaces,
+                DecimalPlaces = 2,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> LeaveThisYear()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:leavethisyear:LeaveThisYear:Leave Allocation:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.VariablesDecimalPlaces,
+                DecimalPlaces = 2,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> LettersAfterName()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:lettersaftername:LettersAfterName:Letters:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> MobilePhone()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:mobilephone:MobilePhone:Mobile No:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> NINumber()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:ninumber:NINumber:NI No:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> Notes()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:notes:Notes:Notes:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Memo,
+                DecimalPlaces = 0,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> PersonalEmail()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:personalemail:PersonalEmail:Personal Email:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> PostToName()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:posttoname:PostToName:Post To Name:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 50,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> PreviousSurname()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:previoussurname:PreviousSurname:Previous Surnames:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 50,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> RetirementDate()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "Employee's Retirement Date";
+            string fparams = $"employee:retirementdate:RetirementDate:State Pension Date:{desc}:Employee:Employee:NullableDateTime:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.dd_MMM_yyyy,
+                DecimalPlaces = 0,
+                MaxColumnLength = 12,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> ServiceIndicator()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:serviceindicator:ServiceIndicator:Previous Service:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 50,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> Surname()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:surname:Surname:Surname:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 50,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> TaxCode()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:taxcode:TaxCode:Tax Code:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> WorkEmail()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:workemail:WorkEmail:Work Email:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> WorkingDays()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:workingdays:WorkingDays:Working Days:{desc}:Employee:Employee:NullableDecimal:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.DecimalPlaces,
+                DecimalPlaces = 2,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> WorkPattern()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "";
+            string fparams = $"employee:workpattern:WorkPattern:WorkPattern:{desc}:Employee:Employee:String:Plain:Init";
+
+            var foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 10,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", "", foptions, new FieldPermissions());
+        }
 
         #endregion
+
+        #region Linked
+
+        private static Tuple<string, string, string, FieldOptions, FieldPermissions> ContractType()
+        {
+            /* fparams = sqlTableName: sqlFieldName: fieldName: displayName: description: fieldType:dataModelType: primitiveType:extractionType: LastModifiedUser */
+            string desc = "Employee's ContractType Description";
+            string fparams = $"employee:contracttype:ContractType:ContractType:{desc}:Employee:Employee:String:Linked:Init";
+
+            LinkedInput linkedInput = new LinkedInput()
+            {
+                SourceDataModelType = DataModelTypeEnum.Employee,
+                SourceFieldType = FieldTypeEnum.Employee,
+
+                SourceLinkFieldName = "ContractTypeId",
+                SourceLinkPrimitiveType = PrimitiveTypeEnum.NullableInt,
+
+                TargetLinkFieldName = "Id",
+                TargetLinkPrimitiveType = PrimitiveTypeEnum.NullableInt,
+
+                TargetDataModelType = DataModelTypeEnum.Enum,
+                TargetFieldName = "Description",
+                TargetFieldType = FieldTypeEnum.Picklist,
+                TargetPrimitiveType = PrimitiveTypeEnum.String
+
+            };
+
+            string linkedDTO = LinkedInput.MapToDTO(linkedInput);
+
+            FieldOptions foptions = new FieldOptions()
+            {
+                CustomFormatString = "",
+                DisplayMode = DataDisplayModeEnum.Text,
+                DecimalPlaces = 0,
+                MaxColumnLength = 25,
+                DisplayNamePlaceHolder = ""
+            };
+
+            return Tuple.Create(fparams, "", linkedDTO, foptions, new FieldPermissions());
+        }
+
+        #endregion
+
 
         #region Enum Linked
 
