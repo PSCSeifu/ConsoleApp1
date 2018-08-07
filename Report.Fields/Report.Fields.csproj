@@ -62,11 +62,18 @@
     <Compile Include="Enums\ReportTypeEnum.cs" />
     <Compile Include="eServicesEnums\Enums.cs" />
     <Compile Include="eServicesEnums\SystemEnums.cs" />
+    <Compile Include="ExitInterviewFields.cs" />
     <Compile Include="Model\AbsenceDDM.cs" />
     <Compile Include="CareerHistoryFields.cs" />
     <Compile Include="Model\CareerHistoryDDM.cs" />
     <Compile Include="Model\EmployeeDDM.cs" />
+    <Compile Include="Model\ExitInterviewDDM.cs" />
+    <Compile Include="Model\PaymentDDM.cs" />
+    <Compile Include="Model\PersonContactDDM.cs" />
     <Compile Include="Model\PicklistDDM.cs" />
+    <Compile Include="Model\TaxCodeDataDDM.cs" />
+    <Compile Include="PaymentFields.cs" />
+    <Compile Include="PersonContactFields.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ref\BooleanFormatString.cs" />
     <Compile Include="Ref\DataDisplayModeEnum.cs" />
@@ -83,6 +90,7 @@
     <Compile Include="Ref\PrimitiveTypeEnum.cs" />
     <Compile Include="Ref\ReportTypeEnum.cs" />
     <Compile Include="Ref\SystemEnums.cs" />
+    <Compile Include="TaxCodeDataFields.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
