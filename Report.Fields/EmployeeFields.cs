@@ -1,4 +1,5 @@
-﻿using Report.Fields.Ref;
+﻿using Report.Fields.Model;
+using Report.Fields.Ref;
 using System;
 using System.Collections.Generic;
 
@@ -894,14 +895,14 @@ namespace Report.Fields
                 SourceDataModelType = DataModelTypeEnum.Employee,
                 SourceFieldType = FieldTypeEnum.Employee,
 
-                SourceLinkFieldName = "ContractTypeId",
+                SourceLinkFieldName = new EmployeeDDM().ContractTypeId.ToString(),
                 SourceLinkPrimitiveType = PrimitiveTypeEnum.NullableInt,
 
-                TargetLinkFieldName = "Id",
+                TargetLinkFieldName = new PicklistDDM().Id.ToString(),
                 TargetLinkPrimitiveType = PrimitiveTypeEnum.NullableInt,
 
                 TargetDataModelType = DataModelTypeEnum.Enum,
-                TargetFieldName = "Description",
+                TargetFieldName = new PicklistDDM().Description.ToString(),
                 TargetFieldType = FieldTypeEnum.Picklist,
                 TargetPrimitiveType = PrimitiveTypeEnum.String
 
@@ -935,22 +936,19 @@ namespace Report.Fields
             string fparams = $"employee:gender:gender:Gender:{desc}:Employee:Employee:String:Linked:Init";
 
             LinkedInput linkedInput = new LinkedInput()
-            {
-                SourceDataModelType = DataModelTypeEnum.Employee,
+            {           
                 SourceFieldType = FieldTypeEnum.Employee,
-
-                SourceLinkFieldName = "Gender",
+                SourceDataModelType = DataModelTypeEnum.Employee,
+                SourceLinkFieldName = new EmployeeDDM().Gender.ToString(),
                 SourceLinkPrimitiveType = PrimitiveTypeEnum.NullableInt,
 
-                TargetLinkFieldName = "gender",
-                TargetLinkPrimitiveType = PrimitiveTypeEnum.NullableInt,
-
                 TargetDataModelType = DataModelTypeEnum.Enum,
-                TargetFieldName = "gender",
-
                 TargetFieldType = FieldTypeEnum.None,
+                TargetLinkFieldName = new EmployeeDDM().Gender.ToString().ToLower(),
+                TargetLinkPrimitiveType = PrimitiveTypeEnum.NullableInt,
+               
+                TargetFieldName = new EmployeeDDM().Gender.ToString().ToLower(),
                 TargetPrimitiveType = PrimitiveTypeEnum.String
-
             };
 
             string linkedDTO = LinkedInput.MapToDTO(linkedInput);
